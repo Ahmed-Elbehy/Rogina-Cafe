@@ -1,0 +1,395 @@
+
+/*! font family */
+@font-face {
+    font-family: Alegreya;
+    src: url("../font/Alegreya-Regular.ttf");
+}
+body{
+    font-family:Alegreya;
+}
+
+/* start navebare */
+.navbar {
+    background-color: rgba(255, 0, 0, 0);
+    z-index: 999;
+}
+/* & START NAVE TOGGLER */
+.navbar-toggler{
+    border:none;
+}
+#checkbox {
+    display: none;
+}
+
+.toggle {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition-duration: .3s;
+}
+
+.bars {
+    width: 100%;
+    height: 4px;
+    background-color: rgb(76, 189, 151);
+    border-radius: 5px;
+    transition-duration: .3s;
+}
+
+#checkbox:checked + .toggle .bars {
+    margin-left: 13px;
+}
+
+#checkbox:checked + .toggle #bar2 {
+    transform: rotate(135deg);
+    margin-left: 0;
+    transform-origin: center;
+    transition-duration: .3s;
+}
+
+#checkbox:checked + .toggle #bar1 {
+    transform: rotate(45deg);
+    transition-duration: .3s;
+    transform-origin: left center;
+}
+
+#checkbox:checked + .toggle #bar3 {
+    transform: rotate(-45deg);
+    transition-duration: .3s;
+    transform-origin: left center;
+}
+/* & END NAVE TOGGLER */
+.nav-item {
+    position: relative;
+    top: -100px;
+    opacity: 0;
+    transition: all .8s;
+}
+/* ^ start nav haver */
+.navbar .nav-item:hover{
+    background-color: red;
+    border-radius: 20px;
+    
+}
+.navbar .nav-item:hover a{
+    color: #eee ;
+}
+/*^ END nav haver */
+/* !START on foucs */
+.nav-item .nav-link:focus{
+    background-color: red;
+    color: #eee ;
+    border-radius: 20px;
+    
+}
+/*! END on foucs   */
+.nav-item  a{
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+/* ^ move nav item */
+.item-about-me{
+    animation: item-about-me 1s forwards;
+}
+.item-menu{
+    animation: item-menu 1s 0.5s forwards;
+}
+.item-contact{
+    animation: item-contact 1s 1s forwards;
+}
+.item-location{
+    animation:item-location 1s 1.5s forwards; 
+}
+@keyframes item-about-me{
+    0%{
+        top: -100px;
+        opacity: 0;
+    }
+    100%{
+        top: 0px;
+        opacity: 1;
+    }
+}
+@keyframes item-menu{
+    0%{
+        top: -100px;
+        opacity: 0;
+    }
+    100%{
+        top: 0px;
+        opacity: 1;
+    }
+}
+@keyframes item-contact{
+    0%{
+        top: -100px;
+        opacity: 0;
+    }
+    100%{
+        top: 0px;
+        opacity: 1;
+    }
+}
+@keyframes item-location{
+    0%{
+        top:-100px;
+        opacity: 0;
+    }
+    100%{
+        top: 0px;
+        opacity: 1;
+    }
+}
+/* !logo */
+.navbar-brand{
+    width: 50px;
+    position: relative;
+    left: -100px;
+    animation: logo 1.3s forwards;
+}
+/* ! move logo */
+@keyframes logo{
+    0%{
+        left: -100px;
+    }
+    100%{
+        left: 50px;
+    }
+}
+/* end navebare */
+/* start header */
+/* ^ header seaction */
+.hearder .header-section{
+    background: url("../img/bg.jpg") ;
+    background-size: contain;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+}
+/* !header content text  */
+.hearder .container{
+    position: absolute;
+    top:90%;
+    padding-left: 5rem;
+    opacity: 0;
+    animation-name: header-text ;
+    animation-duration: 1.3s ;
+    animation-fill-mode: forwards;
+}
+/* * move header content text*/
+@keyframes header-text{
+    0%{
+        top:90%;
+        opacity: 0;
+    }
+    100%{
+        top:55%;
+        opacity: 1;
+    }
+}
+
+.hearder .container .text{
+    color: white;
+    line-height: 20px;
+    font-style: italic;
+}
+.hearder .container .text h1 span{
+    font-size: 40px;
+    font-weight: 900;
+}
+.hearder .container .text p{
+    font-size: 28px;
+    line-height: 40px;
+}
+/* end header */
+
+/* START SECTION ABOUT ME */
+
+.about-me-section{
+    background: url("../img/bg-textura.png");
+    position: relative;
+    background-size: cover;
+    top: 100vh;
+
+}
+.box-image{
+    position: relative;
+    top: -40px;
+    width: 75%;
+}
+.image{
+    width: 100%;
+}
+.about-me{
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    /* transform: translatey(225px); */
+}
+
+.card .card-title{
+    font-weight: 900;
+    font-size: 24px;
+}
+.card .card-body p{
+    line-height: 30px;
+    font-size: 18px;
+}
+
+/* ^ menu Item stile */
+.menu-title h2{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+}
+#menu .out-div,
+#menu .menu-body{
+    border: 1px solid black;
+}
+
+/* END SECTION aboutme */
+
+/* START section images */
+.images,
+#contact,
+footer{
+    position: relative;
+    top: 100vh;
+}
+/* .images .container{
+} */
+.images .image-box{
+    position: relative;
+    /* height: 20rem; */
+    border-radius: 50px;
+    /* border-radius: 20%; */
+    overflow: hidden;
+    
+}
+.image-box .cover{
+    position: absolute;
+    top: 0;
+    left: 3%;
+    bottom: 0;
+    right: 3%;
+    background-color: rgba(197, 89, 89, 0.42);
+    transition: all 0.8s ;
+}
+.images .image-box:hover .cover{
+    opacity: 0;
+    
+}
+.images .contant-image{
+    height: 100%;
+    width: 100%;
+    
+
+}
+/* END section images */
+
+/*  START address*/
+#contact{
+    background-color: #eee;
+    padding-bottom: 50px;
+}
+.phone{
+    margin-left: -3rem;
+}
+#contact .address-title h1{
+font-size: 40px;
+font-weight: 900;
+}
+#contact .address-name .shop-icon,
+#contact .phone .phone-icon{
+    font-size: 28px;
+    color: #c75959;
+    margin-right: 5px;
+    transition: all 0.8s;
+}
+#contact .address-name .shop-icon:hover,
+#contact .phone .phone-icon:hover{
+    color: #ee0f0f;
+}
+#contact .address-name .shop-address,
+#contact .phone .phone-number{
+    font-size: 20px;
+}
+#contact .working-days p:first-child,
+#contact .holiday-days p:first-child
+{
+    font-size: 22px;
+    font-weight: 700;
+}
+#contact .working-days p:last-child,
+#contact .holiday-days p:last-child{
+    font-size: 18px;
+    font-weight: 400;
+}
+/* ^ iframe style */
+#contact iframe{
+    height: 55vh;
+    width: 100%;
+    padding: 5px;
+    border-radius: 20px;
+}
+/*  END address */
+
+/* START footer */
+footer{
+    background-color: black;
+    height: 50px;
+}
+footer p{
+    text-align: center;
+    color: white;
+    padding-top: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    transition: all 0.8s;
+    
+}
+footer p:hover{
+    color: rgb(12, 164, 70);
+    /* padding-top: 10px; */
+    font-size: 21px;
+    
+}
+/* END footer */
+
+/* media */
+
+@media only screen and (max-width:995px){
+    .box-image{
+        left: 10%;
+}
+}
+
+@media only screen and (max-width:800px){
+    .about-me{
+        left: 10%;
+        width: 75%;
+        /* transform: translatey(-55px); */
+
+    }
+}
+@media only screen and (max-width:450px){
+.box-image{
+    top: -20px;
+    width: 90%;
+}
+.about-me{
+    top: 100%;
+    width: 90%;;
+    /* transform: translatey(225px); */
+}
+}
+
